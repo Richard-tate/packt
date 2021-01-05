@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>To-Do-List</title> 
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrapper">
+  <nav class="navbar">
+    <div class="top">
+      <h2 class="title">TODO</h2>
+      <div class="darkBtn"></div>
+    </div>
+    <div class="form">
+      <input type="text" placeholder="create a new todo...." class="form-control" id="addTask">
+      <div class="circle"></div>
+    </div>
+  </nav>
+
+  <div class="container">
+        <ul class="todo-list" id="taskList">
+          
+        </ul>
+          <div class="btn-container">
+                <div class="counter">
+                  <p class="counter-text"><span class="counter-num">0</span> Item(s) Left</p>
+                </div>
+                <div class="filter-container">
+                  <p class="btn-filter active" id="all">All</p>
+                  <p class="btn-filter" id="active">Active</p>
+                  <p class="btn-filter" id="completed">Completed</p>
+                </div>
+                <div class="clearBtnCon">
+                <p class="clearBtn">Clear Completed</p>
+                </div>
+          </div> 
+          <div class="mobile-filter-container">
+            <div class="filter-container-mobile">
+              <p class="btn-filter2 active-mobile" id="allMobile">All</p>
+              <p class="btn-filter2" id="activeMobile">Active</p>
+              <p class="btn-filter2" id="completedMobile" >Completed</p>
+            </div>
+          </div>
+    </div><!-- /.container -->
+
+</div>
+ <script src="scripts.js" defer></script>
+</body>
+</html>
