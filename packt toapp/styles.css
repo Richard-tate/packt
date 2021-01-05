@@ -2,30 +2,38 @@
   box-sizing: border-box;
 }
 :root{
-  --back-groundcolor: hsl(0, 0%, 98%);
+  --back-groundcolor: hsla(223, 20%, 93%, 0.415);
   --linethrough-color: hsl(236, 33%, 92%);
   --underline-color:  hsl(233, 11%, 84%);
   --text-color:hsl(236, 9%, 61%);
-  --text-hover-color:  hsl(235, 19%, 35%);
- --linear-color:linear-gradient( hsl(192, 100%, 67%),hsl(280, 87%, 65%));
- --app-color: #ffffff;
+  --text-color-hover:  hsl(235, 19%, 35%);
+  --linear-color:linear-gradient( hsl(192, 100%, 67%),hsl(280, 87%, 65%));
+  --app-color: #ffffff;
+  --circle-color: hsl(236, 33%, 92%);
+  --backgorund: url('images/bg-desktop-light.jpg');
+  --shadow: rgba(210, 211, 219, 0.5);
+  --toggleBtn: url('images/icon-moon.svg');
+  --primary-text: hsl(235, 19%, 35%);
 
- --backgorund: url('images/bg-desktop-light.jpg');
-
- --toggleBtn: url('images/icon-moon.svg');
+	
+	
 }
 .darkMode{
-  --back-groundcolor: hsl(235, 21%, 11%);
+  --back-groundcolor:hsl(240, 82%, 6%);
   --app-color:  hsl(235, 24%, 19%);
   --linethrough-color:  hsl(233, 14%, 35%);
-  --underline-color: hsl(237, 14%, 26%);
+  --underline-color:hsl(233, 14%, 35%);
   --text-color-hover: hsl(236, 33%, 92%);
   --text-color: hsl(234, 11%, 52%);
-  --random:hsl(237, 14%, 26%);
-
+	--circle-color: hsl(233, 14%, 35%);
   --backgorund: url('images/bg-desktop-dark.jpg');
-
+  --shadow: hsla(235, 21%, 11%, 0.5);
   --toggleBtn: url('images/icon-sun.svg');
+	--primary-text: hsl(234, 39%, 85%);
+	--dark-text: hsl(234, 11%, 52%);
+	--blue-text: hsl(220, 98%, 61%);
+
+	
 }
 
 body {
@@ -40,7 +48,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: var(--back-groundcolor);
-    color: var(--text-color);
+    color: var(--primary-text);
     display: flex;
     flex-direction: column;
     column-gap: 1rem;
@@ -98,7 +106,7 @@ body {
     border-radius: 10px;
     padding-left: 40px;
     background-color: var(--app-color);
-    color: var(--text-color);
+    color: var(--primary-text);
     font-size: 18px;
   }
   
@@ -106,7 +114,7 @@ body {
   width: 600px;
   list-style: none;
   margin:  0 auto;  
-  box-shadow: 6px 5px 10px rgba(39, 40, 41, 0.5);
+  box-shadow: 6px 5px 10px var(--shadow);
   background-color: var(--app-color);
   border-radius: 4px ;
 }
@@ -190,7 +198,7 @@ body {
   left: 0;
   height: 25px;
   width: 25px;
-  border: 1px solid var(--underline-color);
+  border: 1px solid var(--circle-color);
   border-radius: 50%;
 }
 
@@ -232,7 +240,7 @@ body {
   border-radius: 50%;
   width: 24px;
   height: 24px;
-  border:  1px solid var(--underline-color);
+  border:  1px solid var(--circle-color);
   position: absolute;
   top: 18px;
   left: 10px;
@@ -248,12 +256,13 @@ body {
   display: flex;
   position: relative;
   height: 60px;
-  box-shadow: 6px 2px 5px rgba(39, 40, 41, 0.5);
+  box-shadow: 6px 2px 5px var(--shadow);
   margin: 0 auto;
   top: -.1rem;
   background-color: var(--app-color);
   border-top:var(--underline-color) 1px solid ;
   justify-content: space-evenly;
+  font-size: 16px;
 }
 .filter-container{
   display: flex;
@@ -263,14 +272,14 @@ body {
 }
 
 .btn-filter, .btn-filter2{
-  color: var(--linethrough-color);
+  color: var(--text-color);
   font-weight: bolder;
   cursor: pointer;
 }
 
 
-.btn-filter:hover{
-  color: var(--text-color);
+.btn-filter:hover, .btn-filter2:hover{
+  color: var(--text-color-hover);
 }
 .btn-filter.active{
   color: rgb(57, 174, 213);
@@ -293,7 +302,7 @@ body {
   width: 340px;
   height: 50px;
   background-color: var(--app-color);
-  box-shadow: 5px 5px 5px rgba(39, 40, 41, 0.5);
+  box-shadow: 5px 5px 5px var(--shadow);
   margin: 0 auto;
   display: none;
 }
@@ -339,7 +348,6 @@ body {
    display: block;
    margin-top: 1rem;
    border-radius: 3px 3px 6px 6px ;
-   border: 1px solid var(--linethrough-color);
  }
  .box{
    display: flex;
