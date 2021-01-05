@@ -329,6 +329,8 @@ body {
    width: 340px;
    position: relative;
    justify-content: space-evenly;
+   font-size: 14px;
+   padding-top: 6px;
  }
  .filter-container{
    display: none;
