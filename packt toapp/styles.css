@@ -36,13 +36,21 @@
 	
 }
 
+.attribution {
+   font-size: 11px; text-align: center;
+  margin-top: 2rem;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
 body {
   padding: 0;
   margin: 0;
   overflow: auto;
-  height: 100vh;
   width: 100vw;
+  height: 110vh;
   font-size: 18px;
+  font-family: 'Josefin Sans', sans-serif;
+  overflow-x: hidden;
   }
   .wrapper{
     width: 100%;
@@ -262,12 +270,12 @@ body {
   background-color: var(--app-color);
   border-top:var(--underline-color) 1px solid ;
   justify-content: space-evenly;
-  font-size: 16px;
+  font-size: 14px;
 }
 .filter-container{
   display: flex;
   width: 40%;
-  justify-content: space-between;
+  justify-content: space-around;
   color: var(--text-color);
 }
 

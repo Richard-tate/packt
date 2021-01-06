@@ -36,6 +36,8 @@ class ToDoClass {
           {task: 'Go to Dentist', isComplete: false},
           {task: 'Do Gardening', isComplete: true},
           {task: 'Renew Library Account', isComplete: false},
+          {task: 'Write another Todo', isComplete:true},
+          {task: 'Finish This App', isComplete: false},
         ];
       
       }
@@ -130,13 +132,13 @@ class ToDoClass {
         <li class="todo-list-item ${task.isComplete?'completed': ''}">
           <div class="row">
             <div class="checkbox">
-              <label class="rounded"><input id="toggleTaskStatus" type="checkbox" onchange="toDo.toggleTaskStatus(${index})" value="" class="btnCheck" ${task.isComplete?'checked':''}><span class="checkmark"></span></label>
+              <label class="rounded"><input id="toggleTask" type="checkbox" onchange="toDo.toggleTaskStatus(${index})" value="" class="btnCheck" ${task.isComplete?'checked':''}><span class="checkmark"></span></label>
             </div>
             <div class="task-text ${task.isComplete?'complete':''}">
               ${task.task}
             </div>
             <div class="delete-icon-area">
-              <a class="" href="/" onClick="toDo.deleteTask(event, ${index})"><img id="deleteTask" data-id="${index}" class="delete-icon" src="images/icon-cross.svg"></a>
+              <a href="javascript:void(0)" onClick="toDo.deleteTask(event, ${index})"><img id="deleteTask" data-id="${index}" class="delete-icon" src="images/icon-cross.svg" alt="cross"></a>
             </div>
           </div>
         </li>
